@@ -24,10 +24,6 @@ app.add_middleware(
 
 @app.post("/")
 async def root():
-    price_list = []
-    price_list2 = []
-    price_list3 = []
-    total_price2 = []
     
 
     major = pd.read_csv('static/메이저종목.csv')    # 메이저 종목 pandas 데이터 프레임형식으로 불러오기
@@ -67,7 +63,7 @@ async def root():
     return JSONResponse(content=info_coin_total)    #  필드명+현재가APIdate 딕셔너리인 info_coin_total JSON형식으로 전달
 
 
-# cd M-robo\src\main\python << 실행전 들어가야할 디렉토리 위치
+# cd src\main\python << 실행전 들어가야할 디렉토리 위치
 # uvicorn main:app --reload  << (fastapi) 실행 시, 명령코드
 
 #  D:\Programs\aiproject\workspace-sts\M-robo\src\main\python

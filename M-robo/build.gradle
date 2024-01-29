@@ -56,7 +56,14 @@ dependencies {
 	*/
 	
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.slf4j:slf4j-api'
+    implementation 'ch.qos.logback:logback-classic' // Use Logback as the logging implementation
+    // Jackson 라이브러리
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.2.2')
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
 }
+
 
 
 tasks.named('test') {

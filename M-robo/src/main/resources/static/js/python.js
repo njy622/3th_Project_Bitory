@@ -1,5 +1,5 @@
-
-/* 현재가 데이터 생성 자바스크립트 */
+/*
+ 현재가 데이터 생성 자바스크립트 
 
 async function fetchData() {
 	try {
@@ -74,4 +74,4 @@ function createContainerWithTable(data) {
 
 // fetchData 함수 호출
 fetchData();
-//setInterval(fetchData, 1000); // 5000 밀리초(5초)로 설정
+//setInterval(fetchData, 1000); // 5000 밀리초(5초)로 설정*/
