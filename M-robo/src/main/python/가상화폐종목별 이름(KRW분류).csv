@@ -1,0 +1,119 @@
+,market,korean_name,english_name
+0,KRW-BTC,비트코인,Bitcoin
+1,KRW-ETH,이더리움,Ethereum
+2,KRW-NEO,네오,NEO
+3,KRW-MTL,메탈,Metal
+4,KRW-XRP,리플,Ripple
+5,KRW-ETC,이더리움클래식,Ethereum Classic
+6,KRW-SNT,스테이터스네트워크토큰,Status Network Token
+7,KRW-WAVES,웨이브,Waves
+8,KRW-XEM,넴,NEM
+9,KRW-QTUM,퀀텀,Qtum
+10,KRW-LSK,리스크,Lisk
+11,KRW-STEEM,스팀,Steem
+12,KRW-XLM,스텔라루멘,Lumen
+13,KRW-ARDR,아더,Ardor
+14,KRW-ARK,아크,Ark
+15,KRW-STORJ,스토리지,Storj
+16,KRW-GRS,그로스톨코인,Groestlcoin
+17,KRW-ADA,에이다,Ada
+18,KRW-SBD,스팀달러,SteemDollars
+19,KRW-POWR,파워렛저,Power ledger
+20,KRW-BTG,비트코인골드,Bitcoin Gold
+21,KRW-ICX,아이콘,Icon
+22,KRW-EOS,이오스,EOS
+23,KRW-TRX,트론,TRON
+24,KRW-SC,시아코인,Siacoin
+25,KRW-ONT,온톨로지,Ontology
+26,KRW-ZIL,질리카,Zilliqa
+27,KRW-POLYX,폴리매쉬,Polymesh
+28,KRW-ZRX,제로엑스,0x Protocol
+29,KRW-LOOM,룸네트워크,Loom Network
+30,KRW-BCH,비트코인캐시,Bitcoin Cash
+31,KRW-BAT,베이직어텐션토큰,Basic Attention Token
+32,KRW-IOST,아이오에스티,IOST
+33,KRW-CVC,시빅,Civic
+34,KRW-IQ,아이큐,IQ.wiki
+35,KRW-IOTA,아이오타,IOTA
+36,KRW-HIFI,하이파이,Hifi Finance
+37,KRW-ONG,온톨로지가스,ONG
+38,KRW-GAS,가스,GAS
+39,KRW-UPP,센티넬프로토콜,Sentinel Protocol
+40,KRW-ELF,엘프,aelf
+41,KRW-KNC,카이버네트워크,Kyber Network
+42,KRW-BSV,비트코인에스브이,Bitcoin SV
+43,KRW-THETA,쎄타토큰,Theta Token
+44,KRW-QKC,쿼크체인,QuarkChain
+45,KRW-BTT,비트토렌트,BitTorrent
+46,KRW-MOC,모스코인,Moss Coin
+47,KRW-TFUEL,쎄타퓨엘,Theta Fuel
+48,KRW-MANA,디센트럴랜드,Decentraland
+49,KRW-ANKR,앵커,Ankr
+50,KRW-AERGO,아르고,Aergo
+51,KRW-ATOM,코스모스,Cosmos
+52,KRW-TT,썬더코어,ThunderCore
+53,KRW-CRE,캐리프로토콜,Carry Protocol
+54,KRW-MBL,무비블록,MovieBloc
+55,KRW-WAXP,왁스,WAX
+56,KRW-HBAR,헤데라,Hedera
+57,KRW-MED,메디블록,MediBloc
+58,KRW-MLK,밀크,MiL.k
+59,KRW-STPT,에스티피,Standard Tokenization Protocol
+60,KRW-ORBS,오브스,Orbs
+61,KRW-VET,비체인,VeChain
+62,KRW-CHZ,칠리즈,Chiliz
+63,KRW-STMX,스톰엑스,StormX
+64,KRW-DKA,디카르고,dKargo
+65,KRW-HIVE,하이브,Hive
+66,KRW-KAVA,카바,Kava
+67,KRW-AHT,아하토큰,AhaToken
+68,KRW-LINK,체인링크,Chainlink
+69,KRW-XTZ,테조스,Tezos
+70,KRW-BORA,보라,BORA
+71,KRW-JST,저스트,JUST
+72,KRW-CRO,크로노스,Cronos
+73,KRW-TON,톤,TON
+74,KRW-SXP,솔라,SXP
+75,KRW-HUNT,헌트,HUNT
+76,KRW-PLA,플레이댑,PlayDapp
+77,KRW-DOT,폴카닷,Polkadot
+78,KRW-MVL,엠블,MVL
+79,KRW-STRAX,스트라티스,Stratis
+80,KRW-AQT,알파쿼크,Alpha Quark Token
+81,KRW-GLM,골렘,Golem
+82,KRW-SSX,썸씽,SOMESING
+83,KRW-META,메타디움,Metadium
+84,KRW-FCT2,피르마체인,FirmaChain
+85,KRW-CBK,코박토큰,Cobak Token
+86,KRW-SAND,샌드박스,The Sandbox
+87,KRW-HPO,히포크랏,Hippocrat
+88,KRW-DOGE,도지코인,Dogecoin
+89,KRW-STRK,스트라이크,Strike
+90,KRW-PUNDIX,펀디엑스,Pundi X
+91,KRW-FLOW,플로우,Flow
+92,KRW-AXS,엑시인피니티,Axie Infinity
+93,KRW-STX,스택스,Stacks
+94,KRW-XEC,이캐시,eCash
+95,KRW-SOL,솔라나,Solana
+96,KRW-MATIC,폴리곤,Polygon
+97,KRW-AAVE,에이브,Aave
+98,KRW-1INCH,1인치네트워크,1inch Network
+99,KRW-ALGO,알고랜드,Algorand
+100,KRW-NEAR,니어프로토콜,NEAR Protocol
+101,KRW-AVAX,아발란체,Avalanche
+102,KRW-T,쓰레스홀드,Threshold
+103,KRW-CELO,셀로,Celo
+104,KRW-GMT,스테픈,Stepn
+105,KRW-APT,앱토스,Aptos
+106,KRW-SHIB,시바이누,Shiba Inu
+107,KRW-MASK,마스크네트워크,Mask Network
+108,KRW-ARB,아비트럼,Arbitrum
+109,KRW-EGLD,멀티버스엑스,MultiversX
+110,KRW-SUI,수이,Sui
+111,KRW-GRT,더그래프,The Graph
+112,KRW-BLUR,블러,Blur
+113,KRW-IMX,이뮤터블엑스,Immutable X
+114,KRW-SEI,세이,Sei
+115,KRW-MINA,미나,Mina
+116,KRW-CTC,크레딧코인,Creditcoin
+117,KRW-ASTR,아스타,Astar

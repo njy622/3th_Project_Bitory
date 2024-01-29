@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link th:href="@{/css/homestyle.css}" rel="stylesheet" />
+	<meta name="viewport" th:content="${'width=device-width, initial-scale=1.0'}">
+
+<th:block th:replace="~{./common/head}"></th:block>
+</head>
+
+<body>
+	<div class="back-ground-img">
+	<th:block th:replace="~{./common/top}"></th:block>
+		<div class="row">
+		    <div class="aside-container">
+		        <div class="col-1 aside-menu-bar">
+		            <div class="aside-menu-item" th:onclick="|showContent(1)|">AI</div>
+		            <div class="aside-menu-item" th:onclick="|showContent(2)|">TOP</div>
+		            <div class="aside-menu-item" th:onclick="|showContent(3)|">MY</div>
+		            <div class="aside-menu-item" th:onclick="|showContent(4)|">ETC</div>
+		            <!-- 필요한 만큼 메뉴 아이템 추가 -->
+		        </div>
+				<div class="col-11 ms-5 aside-content-container">
+		            <div class="aside-content" th:id="'content-1'">
+		                <!-- 1번에 대한 내용 -->
+								<!-- ai분석 그래프 넣는곳 -->
+						<div class="row">
+							<div class="col">
+								<img th:src="@{/img/test-ai.png}" class="center-image">
+							</div>
+							<div class="col">
+								<img th:src="@{/img/test-ai2.png}" class="center-image">
+							</div>
+						</div>
+		            </div>
+		
+		            <div class="aside-content"	 th:id="'content-2'">
+		                <!-- 2번에 대한 내용 -->
+		                <div class="container">
+							<div class="slide_wrapper">
+								<ul class="slides">
+									<li>
+										slide 01
+									</li>
+									<li>
+										slide 02
+									</li>
+									<li>
+										slide 03
+									</li>
+									<li>
+										slide 04
+									</li>
+									<li>
+										slide 05
+									</li>
+									<li>
+										slide 06
+									</li>
+								</ul>
+								<p class="controls">
+									<button class="carousel-control-prev" type="button" data-bs-slide="prev">
+								        <span class="prev carousel-control-prev-icon"></span>
+								    </button>
+									<button class="carousel-control-next" type="button" data-bs-slide="next">
+										<span class="next carousel-control-next-icon"></span>
+									</button>
+								</p>
+							</div>	
+						</div>
+						<script th:src="@{/js/homescript.js}"></script>
+		            </div>
+		            
+		            <div class="aside-content" th:id="'content-3'">
+		                <!-- 3번에 대한 내용 -->
+		                <div class="sample-container">
+							<div class="my-slide">
+								<!-- 나의 정보 넣는곳 -->
+								<table>
+									<thead>
+										<th>
+											<i class="fa-solid fa-circle-user"></i> 아시아경제님
+										</th>
+										<th>
+										</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>총 보유자산 <i class="fa-solid fa-toggle-on"></i></td>
+											<td>자산 현황</td>
+										</tr>
+										<tr>
+											<td>100원</td>
+										</tr>
+										<tr>
+											<td>총 평가손익</td>
+											<td>0원</td>
+										</tr>
+										<tr>
+											<td>총 수익률</td>
+											<td>0원</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="sample-slide">
+								<!-- 나의 가상화폐 내용 넣는곳 -->
+							</div>
+						</div>
+		            </div>
+		
+		            <div class="aside-content"	 th:id="'content-4'">
+		                <!-- 4번에 대한 내용 -->
+		                <div class="sample-container">
+							<div class="sample-slide">
+								<!-- 기타 등등.. -->
+							</div>
+						</div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<th:block th:replace="~{./common/bottom :: content}"></th:block>
+</body>
+</html>

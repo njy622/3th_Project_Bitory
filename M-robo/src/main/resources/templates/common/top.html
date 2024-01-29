@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+		    const majorSection = document.getElementById('majorSection');
+		    const cryptoTableSection = document.getElementById('cryptoTableSection');
+		    const myAssetsSection = document.getElementById('myAssetsSection');
+		
+		    const majorButton = document.getElementById('majorButton');
+		    const myAssetsButton = document.getElementById('myAssetsButton');
+		
+		    majorButton.addEventListener('click', function () {
+		        majorSection.style.display = 'block';
+		        cryptoTableSection.style.display = 'none';
+		        myAssetsSection.style.display = 'none';
+		    });
+		
+		    myAssetsButton.addEventListener('click', function () {
+		        majorSection.style.display = 'none';
+		        cryptoTableSection.style.display = 'block';
+		        myAssetsSection.style.display = 'block';
+		    });
+		});
+		
+		</script>
+  <title> 함께 만들어가는 Page | M-Robo</title>
+	<link th:href="@{/css/setting.css}" rel="stylesheet" />
+	<link th:href="@{/css/plugin.css}" rel="stylesheet" />
+	<link th:href="@{/css/template.css}" rel="stylesheet" />
+	<link th:href="@{/css/common.css}" rel="stylesheet" />
+	<link th:href="@{/css/style.css}" rel="stylesheet" />
+	<style>
+        .existing-table, .existing-table th, .existing-table td {
+            border: 1px solid black;
+        }
+
+        /* 새로 생성된 테이블 스타일 */
+        .new-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .new-table, .new-table th, .new-table td {
+            border: 1px solid black;
+        }
+
+        /* 부모 컨테이너를 가로 정렬하고 테두리를 추가합니다. */
+        #parent-container {
+            display: flex;
+            border: 1px solid black;
+            overflow-x: auto;
+        }
+
+        /* 개별 컨테이너의 스타일을 추가합니다. */
+        .result-container {
+            margin: 5px; /* 컨테이너 간의 간격을 조절합니다. */
+        }
+    </style>
+</head>
+<body>
+	<!-- [S]opilsol-N1 -->
+  <header class="opilsol-N1" data-bid="vzLrUkY4sM">
+    <div class="header-container container-lg">
+      <div class="header-left">
+        <h1 class="header-title">
+          <a href="javascript:void(0)">
+			<img th:src="@{/images/img_logo_white.png}">
+          </a>
+        </h1>
+      </div>
+      <div class="header-center">
+        <ul class="header-member">
+          <li>
+            <a href="javascript:void(0)">로그인</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">회원가입</a>
+          </li>
+        </ul>
+        <ul class="header-gnblist">
+          <li class="header-gnbitem">
+            <a class="header-gnblink" href="javascript:void(0)" >
+              <span>거래소</span>
+            </a>
+            <ul class="header-sublist">
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>회사개요</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>CEO인사말</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>연혁</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>오시는길</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-gnbitem">
+            <a class="header-gnblink" href="javascript:void(0)" id="majorButton">
+              <span>메이저 종목</span>
+            </a>
+            <ul class="header-sublist">
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>스포츠센터</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>공공문화체육시설</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>아파트 커뮤니티</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>모바일</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-gnbitem">
+            <a class="header-gnblink" href="javascript:void(0)" id="myAssetsButton">
+              <span>My 자산</span>
+            </a>
+            <ul class="header-sublist">
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>스포츠센터</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>공공 문화체육시설</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>아파트 커뮤니티</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>모바일</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-gnbitem">
+            <a class="header-gnblink" href="javascript:void(0)">
+              <span>인재채용</span>
+            </a>
+            <ul class="header-sublist">
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>인사제도</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>복리후생</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-gnbitem">
+            <a class="header-gnblink" href="javascript:void(0)">
+              <span>고객센터</span>
+            </a>
+            <ul class="header-sublist">
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li class="header-subitem">
+                <a class="header-sublink" href="javascript:void(0)">
+                  <span>문의하기</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="header-right">
+        <div class="header-utils">
+          <button class="btn-search">
+			<img th:src="@{/icons/ico_search_white.svg}">
+          </button>
+          <button class="btn-user">
+			<img th:src="@{/icons/ico_user_white.svg}">
+          </button>
+          <button class="btn-allmenu">
+			<img th:src="@{/icons/ico_menu3_white.svg}">
+          </button>
+          <button class="btn-momenu">
+			<img th:src="@{/icons/ico_menu3_white.svg}">
+          </button>
+          <button class="btn-moclose">
+			<img th:src="@{/icons/ico_close_black.svg}">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-fullmenu fullmenu-top">
+      <div class="fullmenu-wrapper">
+        <div class="fullmenu-head">
+          <h4 class="fullmenu-title">
+            <a href="javascript:void(0)">
+			  <img th:src="@{/images/img_logo_black.png}">
+            </a>
+          </h4>
+          <ul class="fullmenu-member">
+            <li>
+              <a href="javascript:void(0)">로그인</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">회원가입</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="fullmenu-gnblist">
+          <li class="fullmenu-gnbitem">
+            <a class="fullmenu-gnblink" href="javascript:void(0)">
+              <span>거래소</span>
+            </a>
+            <ul class="fullmenu-sublist">
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>회사개요</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>CEO인사말</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>연혁</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>오시는 길</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="fullmenu-gnbitem">
+            <a class="fullmenu-gnblink" href="javascript:void(0)">
+              <span>메이저 종목</span>
+            </a>
+            <ul class="fullmenu-sublist">
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>스포츠센터</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>공공 문화체육시설</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>아파트 커뮤니티</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>모바일</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="fullmenu-gnbitem">
+            <a class="fullmenu-gnblink" href="javascript:void(0)">
+              <span>My 자산</span>
+            </a>
+            <ul class="fullmenu-sublist">
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>스포츠센터</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>공공 문화체육시설</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>아파트 커뮤니티</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>모바일</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="fullmenu-gnbitem">
+            <a class="fullmenu-gnblink" href="javascript:void(0)">
+              <span>인재채용</span>
+            </a>
+            <ul class="fullmenu-sublist">
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>인사제도</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>복리후생</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="fullmenu-gnbitem">
+            <a class="fullmenu-gnblink" href="javascript:void(0)">
+              <span>고객센터</span>
+            </a>
+            <ul class="fullmenu-sublist">
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>공지사항</span>
+                </a>
+              </li>
+              <li class="fullmenu-subitem">
+                <a class="fullmenu-sublink" href="javascript:void(0)">
+                  <span>문의하기</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="fullmenu-close">
+		<img th:src="@{/icons/ico_close_black.svg}">
+      </button>
+    </div>
+    <div class="header-search fullmenu-top">
+      <div class="fullmenu-wrapper">
+        <div class="fullmenu-head">
+          <h4 class="fullmenu-title">
+            <a href="javascript:void(0)">
+			  <img th:src="@{/images/img_logo_black.png}">
+            </a>
+          </h4>
+        </div>
+        <div class="header-search-wrap">
+          <div class="container-md">
+            <div class="header-search-form">
+              <div class="inputset inputset-line">
+                <button class="icon-right icon-search btn" type="button" aria-label="아이콘">
+                </button>
+                <input type="text" class="inputset-input form-control" placeholder="검색어를 입력해주세요." aria-label="내용">
+              </div>
+            </div>
+            <div class="recom-list">
+              <h5 class="recom-tit">추천 검색어</h5>
+              <ul>
+                <li>
+                  <a href="#n">솔루션</a>
+                </li>
+                <li class="on">
+                  <a href="#n">아파트 커뮤니티</a>
+                </li>
+                <li>
+                  <a href="#n">플랫폼</a>
+                </li>
+                <li>
+                  <a href="#n">스포츠센터</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="fullmenu-close">
+		<img th:src="@{/icons/ico_close_black.svg}">
+      </button>
+    </div>
+  </header>
+  <!-- [E]opilsol-N3 -->
+</body>
+</html>
