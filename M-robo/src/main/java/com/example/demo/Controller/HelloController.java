@@ -14,7 +14,13 @@ public class HelloController {
     @GetMapping("/home")
 //    @ResponseBody   // @RestController를 쓸 때는 해당 부분 주석 달기
     public String hello() {
-        return "home";
+        return "/market/List2";
+    }
+    
+    @GetMapping("/home4")
+//    @ResponseBody   // @RestController를 쓸 때는 해당 부분 주석 달기
+    public String hello2() {
+    	return "/market/List3";
     }
     
     @GetMapping("/home2")
