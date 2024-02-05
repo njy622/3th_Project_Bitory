@@ -1,8 +1,10 @@
 package com.example.bitory.user.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -11,12 +13,13 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Entity
+@NoArgsConstructor @AllArgsConstructor
 public class User {
 
     @Id
     @Column(name = "user_id")
     @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+    @GenericGenerator(name = "system-uuid")
     private String id;
 
     @Column(unique = true, nullable = false)
@@ -31,7 +34,6 @@ public class User {
     private LocalDateTime joinDate;
 
     @Enumerated(EnumType.STRING)
-
     @Builder.Default
     private Role role = Role.Common;
 

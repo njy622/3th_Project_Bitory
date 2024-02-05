@@ -44,6 +44,11 @@ dependencies {
 	// Thymeleaf Layout Dialect 의존성 추가
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	
+	//웹소켓
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	
+	
 }
 
 //tasks.named('test') {
