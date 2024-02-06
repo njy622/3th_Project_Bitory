@@ -676,17 +676,17 @@ Banner Style
 
 .main-banner .item-1 {
   /*background-image: url(../images/banner-item-01.jpg);*/
-  background-color: unset;
+  background-color: rgb(226, 223, 247);
 }
 
 .main-banner .item-2 {
   /*background-image: url(../images/banner-item-02.jpg);*/
-  background-color: unset;
+  background-color: rgb(226, 223, 247);
 }
 
 .main-banner .item-3 {
   /*background-image: url(../images/banner-item-03.jpg);*/
-  background-color: unset;
+  background-color: rgb(226, 223, 247);
 }
 
 .main-banner .item {

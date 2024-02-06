@@ -140,3 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Connect to WebSocket when the page loads
   connectWebSocket();
 });
+
+
+
