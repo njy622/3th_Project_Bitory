@@ -1,5 +1,7 @@
 # pip install finance-datareader prophet matplotlib seaborn plotly bs4
 # pip install fastapi pyupbit
+# uvicorn main:app --reload
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -36,9 +38,9 @@ def read_root():
 @app.get("/responsePrice/{ticker}")
 async def read_root(ticker: str):
 
-    pred_price, date = get_predict_crypto_price(ticker)     # 전달받은 가상화폐 ticker를 함수에 인자값으로 전달
+    pred_price, real_price, date = get_predict_crypto_price(ticker)     # 전달받은 가상화폐 ticker를 함수에 인자값으로 전달
 
-    return {"days":date, "pred_price":pred_price}           # 일시와 예측 가격데이터를 spring서버로 전달
+    return {"days":date, "pred_price":pred_price, "real_price":real_price}           # 일시와 예측 가격데이터를 spring서버로 전달
 
 
 # @app.get("/items/{item_id}")
@@ -68,9 +70,11 @@ async def read_root(ticker: str):
 
 def get_predict_crypto_price(ticker):                   # 가상화폐의 가격을 예측하는 사용자 함수
 
-    df = pyupbit.get_ohlcv(f"KRW-{ticker}", count=2000, interval="minute1")     # 원화 단위의 가상화폐, 시간 단위는 분 단위, 현재 시점부터 2000분 전의 데이터를 요청
+    df = pyupbit.get_ohlcv(f"KRW-{ticker}", count=2000, interval="week")     # 원화 단위의 가상화폐, 시간 단위는 분 단위, 현재 시점부터 2000분 전의 데이터를 요청
     df['y'] = df['close']
     df['ds'] = df.index
+
+    real_price = df['y']
 
     m = prh(                                            # Prophet 파라미터 설정
     changepoint_prior_scale=1,
@@ -98,6 +102,6 @@ def get_predict_crypto_price(ticker):                   # 가상화폐의 가격
         date.append(i)
     date
 
-    return pred_price, date                             # 예측 가격과 일시를
+    return pred_price, real_price, date                             # 예측 가격과 일시를
 
 
